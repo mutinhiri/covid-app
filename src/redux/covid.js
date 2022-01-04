@@ -26,5 +26,20 @@ export const clearCovidData = () => ({
 export const fetchCovidData = (rpl) => async (dispatch) => {
   const date = new Date();
   const dateString = date.toISOString().slice(0, 10)
+  const response = await fetch(
+    `https://api.covid19tracking.narrativa.com/api/${dateString}/country/us/region/${rpl.replace(
+      '-',
+      '_',
+    )}`,
+  );
+
+  const allData = await response.json();
+  const covidData = allData.dates[dateString].countries.US.regions[0];
+  dispatch(
+    getCovidData({
+      id: covidData.id,
+      confirmed: 
+    })
+  )
 
 }
