@@ -18,4 +18,7 @@ const dataReducer = (state = initialState, action) => {
 export const fetchAllData = () => async (dispatch) => {
   const response = await fetch('https://civilserviceusa.github.io/us-states/data/states.json');
   const states = await response.json()
+  dispatch(getAllData(states))
 }
+
+export default dataReducer
