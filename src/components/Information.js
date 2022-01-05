@@ -25,7 +25,21 @@ export const Information = (props) => {
       </div>
       <div className="main-card">
         <img src={region.map_image_url} alt={`${region.state}-map`} />
+        <div>
+          <h1>{`${region.state} (${region.code})`}</h1>
+          <p>{ region.nickname}</p>
+        </div>
       </div>
+      <div className="bar"> General Info</div>
+      <ul>
+        <li className="data-item">
+          <span className="tag">Population</span>
+          <span>
+            {region.population.toLocaleString('en-US')}
+          </span>
+
+        </li>
+      </ul>
     </div>
   )
 }
