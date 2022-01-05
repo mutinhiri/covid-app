@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { BsArrowRightCircle } from 'react-icons/bs'
 import fetchAllData from '../redux/data'
 import Map from '../us-map.png'
 
-export const Home = () => {
+const Home = () => {
   const states = useSelector((state) => state.data);
   const dispatch = useDispatch()
 
@@ -37,8 +38,14 @@ export const Home = () => {
       <ul className="states-list">
         {states.filter((item) => item.state.toLowerCase().startsWith(searchState.toLowerCase()))
           .map((item, index) => (
-            <li className={`list-item ${index % 2=== 0 ? 'bg-1' : 'bg-2'}`}>
-              
+            <li className={`list-item ${index % 2 === 0 ? 'bg-1' : 'bg-2'}`}
+            key={item.code}>
+              <Link className="state-link">
+                <BsArrowRightCircle />
+                <img src={item.map_image_url} className='state-map' alt="state-map" />
+                <p className="state-name">{item.state}</p>
+                <p className="state-today-confirmed">{ `Population: ${item.population}`}</p>
+              </Link>
             </li>
           ))
         }
@@ -47,3 +54,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home
