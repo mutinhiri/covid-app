@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
+import { BsArrowRightCircle } from 'react-icons/bs'
 import fetchAllData from '../redux/data'
 import Map from '../us-map.png'
 
