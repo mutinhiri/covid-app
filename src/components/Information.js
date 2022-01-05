@@ -37,8 +37,32 @@ export const Information = (props) => {
           <span>
             {region.population.toLocaleString('en-US')}
           </span>
-
         </li>
+        <li className="data-item">
+          <span className="tag">Population Rank</span>
+          <span className="data">{ region.population_rank}</span>
+        </li>
+        <li className="data-item">
+          <span className="tag">Capital city</span>
+          <span className="data">{ region.capital_city}</span>
+        </li>
+      </ul>
+      <div className="bar">Todays covid information</div>
+      <ul>
+        {covidData[rpl] ? (
+          Object.keys(covidData[rpl])
+            .filter((x) => x !== "id")
+            .map((key) => (
+              <li key={key} className="data-item">
+                <span className="tag">
+                  {`${key.charAt(0).toUpperCase()} ${key
+                    .slice(1)
+                    .replace(/_/g, ' ')}`}
+                </span>
+
+              </li>
+            ))
+        )}
       </ul>
     </div>
   )
