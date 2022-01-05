@@ -52,3 +52,5 @@ export const fetchCovidData = (rpl) => async (dispatch) => {
   )
 
 }
+
+export default covidReducer;
