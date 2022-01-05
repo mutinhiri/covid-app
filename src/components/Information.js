@@ -17,7 +17,15 @@ export const Information = (props) => {
   }, []);
   return (
     <div>
-      
+      <div className="details-header">
+        <Link to="/">
+          <MdArrowBackIosNew />
+        </Link>
+        <p>state/region details</p>
+      </div>
+      <div className="main-card">
+        <img src={region.map_image_url} alt={`${region.state}-map`} />
+      </div>
     </div>
   )
 }
