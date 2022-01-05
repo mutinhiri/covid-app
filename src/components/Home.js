@@ -30,7 +30,19 @@ export const Home = () => {
         placeholder='Search here'
         onChange={(e) => {
           setSearchState(e.target.value);
-      } }/>
+        }}
+      />
+      <div className="bar">Statistics by State</div>
+      <ul className="states-list">
+        {states.filter((item) => item.state.toLowerCase().startsWith(searchState.toLowerCase()))
+          .map((item, index) => (
+            <li className={`list-item ${index % 2=== 0 ? 'bg-1' : 'bg-2'}`}>
+              
+            </li>
+          ))
+        }
+
+      </ul>
     </div>
   )
 }
