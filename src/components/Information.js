@@ -6,7 +6,15 @@ import { MdArrowBackIosNew } from 'react-icons/md'
 import { fetchCovidData } from "../redux/covid";
 
 export const Information = (props) => {
-  const
+  const { region } = props
+  const rpl = region.rpl.replace('-', '_');
+
+  const covidData = useSelector((state) => state.covid)
+  const dispatch = useDispatch(); 
+
+  useEffect(() => {
+    if (!covidData[rpl]) dispatch(fetchCovidData(rpl))
+  }, []);
   return (
     <div>
       
