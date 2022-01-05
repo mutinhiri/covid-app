@@ -40,9 +40,9 @@ const Home = () => {
           .map((item, index) => (
             <li className={`list-item ${index % 2 === 0 ? 'bg-1' : 'bg-2'}`}
             key={item.code}>
-              <Link className="state-link">
+              <Link className="state-link" to={`/${item.rpl}`}>
                 <BsArrowRightCircle />
-                <img src={item.map_image_url} className='state-map' alt="state-map" />
+                <img src={item.map_image_url} className='state-map' alt={`${item.rpl}`} />
                 <p className="state-name">{item.state}</p>
                 <p className="state-today-confirmed">{ `Population: ${item.population}`}</p>
               </Link>
