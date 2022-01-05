@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux'
+import fetchAllData from '../redux/data'
 
 export const Home = () => {
   const states = useSelector((state) => state.data);
@@ -12,7 +13,11 @@ export const Home = () => {
     if(!states.length) dispatch(fetchAllData())
   }, [])
   return (
-    <div>
+    <div className='home-page'>
+      <div className='header'>
+        All states
+      </div>
+      
       
     </div>
   )
