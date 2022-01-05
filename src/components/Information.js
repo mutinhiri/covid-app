@@ -59,11 +59,22 @@ export const Information = (props) => {
                     .slice(1)
                     .replace(/_/g, ' ')}`}
                 </span>
+                <span className="data">
+                  {covidData[rpl][key].toLocaleString('en-US')}
+                </span>
 
               </li>
             ))
+        ) : (
+            <li className="data-item">Loading ...</li>
         )}
       </ul>
     </div>
   )
 }
+
+Information.propTypes = {
+  region: PropTypes.instanceOf(Object).isRequired
+}
+
+export default Information
