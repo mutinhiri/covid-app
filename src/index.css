@@ -16,7 +16,7 @@ ul {
 }
 
 .details-header {
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
   display: flex;
   align-items: center;
   padding: 0.6rem 0.4rem;
@@ -31,7 +31,7 @@ ul {
 }
 
 .main-card-home {
-  background-color: #5687e3;
+  background-color:  rgb(252,81,147);
   display: flex;
   padding: 0.6rem 1.5rem;
   gap: 5px;
@@ -55,7 +55,7 @@ ul {
 }
 
 .data-item {
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
   font-size: 12px;
   padding: 0.4rem;
   display: flex;
@@ -76,14 +76,14 @@ a {
 }
 
 .header {
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
   text-align: center;
   padding: 0.6rem 0.4rem;
 }
 
 .search-bar {
   border: none;
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
   width: 95vw;
   padding: 0.4rem;
   font-weight: bold;
@@ -102,7 +102,7 @@ a {
 }
 
 .bar {
-  background-color: #35558a;
+  background-color: rgb(212, 22, 95);
   font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: bold;
@@ -111,23 +111,23 @@ a {
 .states-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #35558a;
+  background-color: rgb(212, 42, 108);
 }
 
 .bg-1 {
-  background-color: #3d61a5;
+  background-color: rgb(252,81,147);
  }
 
 .bg-2 {
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
 }
 
 .bg-1:nth-child(4n + 1) {
-  background-color: #4269b3;
+  background-color: rgb(211,70,124);
 }
 
 .bg-2:nth-child(4n + 2) {
-  background-color: #3d61a5;
+  background-color: rgb(252,81,147);
 }
 
 .list-item {
