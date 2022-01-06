@@ -17,7 +17,7 @@ describe('Application test', () => {
     const tree = renderer
       .create(
         <Provider store={store}>
-          <App/>
+          <App/ >
         </Provider>
     )
   })
