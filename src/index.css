@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 body {
-  background-color: rgb(208,67,121);
+  background-color: rgb(208, 67, 121);
 }
 
 * {
@@ -16,22 +16,22 @@ ul {
 }
 
 .details-header {
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
   display: flex;
   align-items: center;
   padding: 0.6rem 0.4rem;
 }
 
-.details-header p{
+.details-header p {
   margin: 0 auto;
 }
 
-.main-card p{
+.main-card p {
   font-size: 12px;
 }
 
 .main-card-home {
-  background-color:  rgb(252,81,147);
+  background-color: rgb(252, 81, 147);
   display: flex;
   padding: 0.6rem 1.5rem;
   gap: 5px;
@@ -45,17 +45,17 @@ ul {
   gap: 5px;
 }
 
-.main-card-home h1{
+.main-card-home h1 {
   font-size: 22px;
 }
 
 .main-card-home img {
-   margin: auto 0;
+  margin: auto 0;
   max-width: 50%;
 }
 
 .data-item {
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
   font-size: 12px;
   padding: 0.4rem;
   display: flex;
@@ -76,14 +76,14 @@ a {
 }
 
 .header {
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
   text-align: center;
   padding: 0.6rem 0.4rem;
 }
 
 .search-bar {
   border: none;
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
   width: 95vw;
   padding: 0.4rem;
   font-weight: bold;
@@ -108,6 +108,7 @@ a {
   font-weight: bold;
   padding: 0.4rem;
 }
+
 .states-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,19 +116,19 @@ a {
 }
 
 .bg-1 {
-  background-color: rgb(252,81,147);
- }
+  background-color: rgb(252, 81, 147);
+}
 
 .bg-2 {
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
 }
 
 .bg-1:nth-child(4n + 1) {
-  background-color: rgb(211,70,124);
+  background-color: rgb(211, 70, 124);
 }
 
 .bg-2:nth-child(4n + 2) {
-  background-color: rgb(252,81,147);
+  background-color: rgb(252, 81, 147);
 }
 
 .list-item {
