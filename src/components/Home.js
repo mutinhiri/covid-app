@@ -46,7 +46,7 @@ const Home = () => {
                 <BsArrowRightCircle />
                 <img
                   className="state-map"
-                  src={item.map_image_url}
+                  src={item.skyline_background_url}
                   alt={`${item.slug}-map`}
                 />
                 <p className="state-name">{item.state}</p>

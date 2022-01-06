@@ -26,7 +26,7 @@ const Information = (props) => {
         <p>state/region details</p>
       </div>
       <div className="main-card">
-        <img src={region.map_image_url} alt={`${region.state}-map`} />
+        <img src={region.state_seal_url} alt={`${region.state}-map`} />
         <div>
           <h1>{`${region.state} (${region.code})`}</h1>
           <p>{region.nickname}</p>
