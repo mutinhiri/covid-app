@@ -49,6 +49,11 @@ ul {
   font-size: 22px;
 }
 
+.main-card-home img {
+   margin: auto 0;
+  max-width: 50%;
+}
+
 .data-item {
   background-color: #4269b3;
   font-size: 12px;
@@ -63,4 +68,15 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: #4269b3;
+  text-align: center;
+  padding: 0.6rem 0.4rem;
 }
