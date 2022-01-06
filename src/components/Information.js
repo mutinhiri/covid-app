@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import PropTypes from 'prop-types'
-import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { MdArrowBackIosNew } from 'react-icons/md'
-import { fetchCovidData } from "../redux/covid";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { MdArrowBackIosNew } from 'react-icons/md';
+import { fetchCovidData } from '../redux/covid';
 
 const Information = (props) => {
   const { region } = props;
@@ -75,7 +75,7 @@ const Information = (props) => {
 };
 
 Information.propTypes = {
-  region: PropTypes.instanceOf(Object).isRequired
-}
+  region: PropTypes.instanceOf(Object).isRequired,
+};
 
-export default Information
+export default Information;

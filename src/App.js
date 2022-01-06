@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './App.css';
-import Home from './components/Home'
+import Home from './components/Home';
 import Information from './components/Information';
 
 function App() {

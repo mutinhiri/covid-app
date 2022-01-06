@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux'
-import { BsArrowRightCircle } from 'react-icons/bs'
-import { fetchAllData } from '../redux/data'
-import Map from '../us-map.png'
+
+import { BsArrowRightCircle } from 'react-icons/bs';
+import { fetchAllData } from '../redux/data';
+
+import Map from '../us-map.png';
 
 const Home = () => {
   const states = useSelector((state) => state.data);
@@ -59,4 +60,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
