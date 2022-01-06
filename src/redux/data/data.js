@@ -1,4 +1,4 @@
-const GET_ALL_DATA = 'GET_ALL_DATA';
+const GET_ALL_DATA = 'data/GET_ALL_DATA';
 
 const initialState = [];
 

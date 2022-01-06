@@ -3,18 +3,20 @@ import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { MdArrowBackIosNew } from 'react-icons/md'
-import { fetchCovidData } from "../redux/covid";
+import { fetchCovidData } from "../redux/covid/covid";
 
-export const Information = (props) => {
-  const { region } = props
-  const rpl = region.rpl.replace('-', '_');
+const Information = (props) => {
+  const { region } = props;
 
-  const covidData = useSelector((state) => state.covid)
-  const dispatch = useDispatch(); 
+  const slug = region.slug.replace('-', '_');
+
+  const covidData = useSelector((state) => state.covid);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!covidData[rpl]) dispatch(fetchCovidData(rpl))
+    if (!covidData[slug]) dispatch(fetchCovidData(slug));
   }, []);
+
   return (
     <div>
       <div className="details-header">
@@ -27,51 +29,50 @@ export const Information = (props) => {
         <img src={region.map_image_url} alt={`${region.state}-map`} />
         <div>
           <h1>{`${region.state} (${region.code})`}</h1>
-          <p>{ region.nickname}</p>
+          <p>{region.nickname}</p>
         </div>
       </div>
-      <div className="bar"> General Info</div>
+      <div className="bar">GENERAL INFORMATION</div>
       <ul>
         <li className="data-item">
           <span className="tag">Population</span>
-          <span>
+          <span className="data">
             {region.population.toLocaleString('en-US')}
           </span>
         </li>
         <li className="data-item">
           <span className="tag">Population Rank</span>
-          <span className="data">{ region.population_rank}</span>
+          <span className="data">{region.population_rank}</span>
         </li>
         <li className="data-item">
-          <span className="tag">Capital city</span>
-          <span className="data">{ region.capital_city}</span>
+          <span className="tag">Capital City</span>
+          <span className="data">{region.capital_city}</span>
         </li>
       </ul>
-      <div className="bar">Todays covid information</div>
+      <div className="bar">TODAY&apos;S COVID INFORMATION</div>
       <ul>
-        {covidData[rpl] ? (
-          Object.keys(covidData[rpl])
-            .filter((x) => x !== "id")
+        {covidData[slug] ? (
+          Object.keys(covidData[slug])
+            .filter((x) => x !== 'id')
             .map((key) => (
               <li key={key} className="data-item">
                 <span className="tag">
-                  {`${key.charAt(0).toUpperCase()} ${key
+                  {`${key.charAt(0).toUpperCase()}${key
                     .slice(1)
                     .replace(/_/g, ' ')}`}
                 </span>
                 <span className="data">
-                  {covidData[rpl][key].toLocaleString('en-US')}
+                  {covidData[slug][key].toLocaleString('en-US')}
                 </span>
-
               </li>
             ))
         ) : (
-            <li className="data-item">Loading ...</li>
+          <li className="data-item">Loading...</li>
         )}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 Information.propTypes = {
   region: PropTypes.instanceOf(Object).isRequired

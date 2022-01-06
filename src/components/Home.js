@@ -3,56 +3,60 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { BsArrowRightCircle } from 'react-icons/bs'
-import fetchAllData from '../redux/data'
+import { fetchAllData } from '../redux/data/data'
 import Map from '../us-map.png'
 
 const Home = () => {
   const states = useSelector((state) => state.data);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const [searchState, setSearchState] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    if(!states.length) dispatch(fetchAllData())
-  }, [])
+    if (!states.length) dispatch(fetchAllData());
+  }, []);
+
   return (
-    <div className='home-page'>
-      <div className='header'>
-        All states
-      </div>
-      <div className='main-card'>
-        <img src={Map} alt="map-for-state" />
+    <div className="home-page">
+      <div className="header">all states</div>
+      <div className="main-card">
+        <img src={Map} alt="us-map" />
         <div>
           <h1>United States</h1>
         </div>
       </div>
       <input
+        className="search-bar"
         type="text"
-        className='search-bar'
-        placeholder='Search here'
-        onChange={(e) => {
-          setSearchState(e.target.value);
+        placeholder="SEARCH"
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
         }}
       />
-      <div className="bar">Statistics by State</div>
+      <div className="bar">STATS BY STATE</div>
       <ul className="states-list">
-        {states.filter((item) => item.state.toLowerCase().startsWith(searchState.toLowerCase()))
+        {states
+          .filter((item) => item.state.toLowerCase().startsWith(searchTerm.toLowerCase()))
           .map((item, index) => (
-            <li className={`list-item ${index % 2 === 0 ? 'bg-1' : 'bg-2'}`}
-            key={item.code}>
-              <Link className="state-link" to={`/${item.rpl}`}>
+            <li
+              className={`list-item ${index % 2 === 0 ? 'bg-1' : 'bg-2'}`}
+              key={item.code}
+            >
+              <Link className="state-link" to={`/${item.slug}`}>
                 <BsArrowRightCircle />
-                <img src={item.map_image_url} className='state-map' alt={`${item.rpl}`} />
+                <img
+                  className="state-map"
+                  src={item.map_image_url}
+                  alt={`${item.slug}-map`}
+                />
                 <p className="state-name">{item.state}</p>
-                <p className="state-today-confirmed">{ `Population: ${item.population}`}</p>
+                <p className="state-today-confirmed">{`Population: ${item.population}`}</p>
               </Link>
             </li>
-          ))
-        }
-
+          ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Home

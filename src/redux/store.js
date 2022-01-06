@@ -1,14 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
-import dataReducer from "./data";
-import covidReducer from "./covid";
+import dataReducer from "./data/data";
+import covidReducer from "./covid/covid";
  
-const rootReducer = combineReducers({
+const reducer = combineReducers({
   data: dataReducer,
-  covid: covidReducer
+  covid: covidReducer,
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk, logger))
+const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 export default store;
