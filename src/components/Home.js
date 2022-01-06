@@ -33,7 +33,7 @@ const Home = () => {
           setSearchTerm(event.target.value);
         }}
       />
-      <div className="bar">STATS BY STATE</div>
+      <div className="bar">Statistics By State </div>
       <ul className="states-list">
         {states
           .filter((item) => item.state.toLowerCase().startsWith(searchTerm.toLowerCase()))
