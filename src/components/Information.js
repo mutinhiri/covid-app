@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { MdArrowBackIosNew } from 'react-icons/md'
-import { fetchCovidData } from "../redux/covid/covid";
+import { fetchCovidData } from "../redux/covid";
 
 const Information = (props) => {
   const { region } = props;

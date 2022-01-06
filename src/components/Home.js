@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux'
 import { BsArrowRightCircle } from 'react-icons/bs'
-import { fetchAllData } from '../redux/data/data'
+import { fetchAllData } from '../redux/data'
 import Map from '../us-map.png'
 
 const Home = () => {
