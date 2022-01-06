@@ -30,6 +30,25 @@ ul {
   font-size: 12px;
 }
 
+.main-card-home {
+  background-color: #5687e3;
+  display: flex;
+  padding: 0.6rem 1.5rem;
+  gap: 5px;
+  min-height: 25vh;
+}
+
+.main-card-home div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.main-card-home h1{
+  font-size: 22px;
+}
+
 .data-item {
   background-color: #4269b3;
   font-size: 12px;
@@ -42,3 +61,6 @@ ul {
   font-weight: bold;
 }
 
+img {
+  max-width: 100%;
+}

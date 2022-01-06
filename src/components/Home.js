@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="header">all states</div>
-      <div className="main-card">
+      <div className="main-card-home">
         <img src={Map} alt="us-map" />
         <div>
           <h1>United States</h1>
