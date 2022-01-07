@@ -14,8 +14,7 @@ describe('Application test', () => {
 
   it('Renders correctly', () => {
     store = mockStore(initialState);
-    const tree = renderer
-      .create(
+    renderer.create(
         <Provider store={store}>
           <App />
         </Provider>,
