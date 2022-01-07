@@ -17,6 +17,28 @@ Application to display information about US States and their covid statistics as
 
 Click [here](https://priceless-kirch-2b7a76.netlify.app/) to open live demo
 
+## Getting Started 
+
+To get a local copy up and running, follow the following steps:
+
+## Prerequisites 
+- A working Laptop or Desktop
+- Internet 
+
+  Clone the repo and enter the directory
+
+```shell
+git clone https://github.com/mutinhiri/covid-app && cd covid-app
+```
+
+### Install
+
+Install the npm packages
+
+```shell 
+npm install
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -39,11 +61,15 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🤝 Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to contribute to this project 
 
-### `npm run eject`
+Just pull an issue in the [issues page](https://github.com/mutinhiri/covid-app/issues)
 
+Give a ⭐️ if you like this project!
+
+## Acknowledgements
+
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
