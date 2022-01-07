@@ -17,6 +17,10 @@ Application to display information about US States and their covid statistics as
 
 Click [here](https://priceless-kirch-2b7a76.netlify.app/) to open live demo
 
+## Presentation 
+
+[Video Link](https://www.veed.io/view/13f85020-4960-4080-905d-71a66b6e4fe2)
+
 ## Getting Started 
 
 To get a local copy up and running, follow the following steps:
