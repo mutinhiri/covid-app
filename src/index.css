@@ -2,6 +2,7 @@
 
 body {
   background-color: rgb(208, 67, 121);
+
   /* width: 90vw; */
 }
 
@@ -157,11 +158,10 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    .sm-img {
+  .sm-img {
     width: 80vw;
     height: 290px;
     justify-content: center;
     margin-left: 20px;
   }
-  
 }
