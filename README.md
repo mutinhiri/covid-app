@@ -13,7 +13,9 @@ Application to display information about US States and their covid statistics as
 - React Testing Library
 - Covid 19 API 
 
+# Live Demo
 
+Click [here](https://priceless-kirch-2b7a76.netlify.app/) to open live demo
 
 ## Available Scripts
 
