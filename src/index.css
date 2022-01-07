@@ -2,6 +2,7 @@
 
 body {
   background-color: rgb(208, 67, 121);
+  width: 90vw;
 }
 
 * {
@@ -153,4 +154,11 @@ a {
 
 .state-today-confirmed {
   font-size: 0.8rem;
+}
+
+.sm-img {
+  width: 80vw;
+  height: 290px;
+  justify-content: center;
+  margin-left: 20px;
 }
