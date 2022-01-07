@@ -15,9 +15,9 @@ describe('Application test', () => {
   it('Renders correctly', () => {
     store = mockStore(initialState);
     renderer.create(
-        <Provider store={store}>
-          <App />
-        </Provider>,
-      );
+      <Provider store={store}>
+        <App />
+      </Provider>,
+    );
   });
 });
